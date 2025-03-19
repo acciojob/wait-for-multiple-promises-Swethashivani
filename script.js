@@ -7,7 +7,7 @@ let time=Math.random()*(3-1)+1;
 	});
 }
 let promises = [createPromise(1), createPromise(2), createPromise(3)];
-promise.all(promises).then(results=>{
+Promise.all(promises).then(results=>{
 	let tbody= document.getElementById("output");
 	tbody.innerHTML="";
 	let maxTime=0;
