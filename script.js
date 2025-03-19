@@ -12,6 +12,10 @@ Promise.all(promises).then(results=>{
 	tbody.innerHTML="";
 	let maxTime=0;
 	results.forEach(result=>{
+		 let loadingElement = document.getElementById("loading");
+    if (loadingElement) {
+        loadingElement.remove();
+    }
 		 let row = document.createElement("tr");
                 row.innerHTML = `<td>Promise ${result.index}</td><td>${result.time.toFixed(3)}</td>`;
                 tbody.appendChild(row);
